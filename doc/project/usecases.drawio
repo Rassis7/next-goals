@@ -1,0 +1,53 @@
+<mxfile>
+    <diagram id="t3SFFk1hNKhCOq2pFXD-" name="Page-1">
+        <mxGraphModel dx="1664" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="45" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;gradientColor=none;dashed=1;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="200" width="450" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Abrir meta" style="ellipse;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="250" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="25" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="340" y="490" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="Gerenciar os prazos" style="ellipse;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="300" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="25" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="25" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="25" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="440" y="490"/>
+                            <mxPoint x="440" y="320"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="USER" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff2cc;strokeColor=#d6b656;gradientColor=#ffd966;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="460" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Fechar meta" style="ellipse;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="220" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Gerenciar a meta" style="ellipse;whiteSpace=wrap;html=1;fillColor=#647687;strokeColor=#314354;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="360" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="Sub-meta" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6d8764;strokeColor=#3A5431;fontColor=#ffffff;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="602.5" width="110" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" parent="1" source="45" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

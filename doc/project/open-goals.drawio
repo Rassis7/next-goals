@@ -1,0 +1,61 @@
+<mxfile>
+    <diagram id="ZuoaEKMHkf55eBU6axsK" name="Page-1">
+        <mxGraphModel dx="1664" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="20">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Abrir Meta" style="whiteSpace=wrap;html=1;strokeColor=#A50040;fontColor=#ffffff;fillColor=#FF66FF;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Comunicar com API&lt;br&gt;(Infra)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d80073;strokeColor=#A50040;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="290" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Validar formulário&lt;br&gt;(Validation)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="220" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Renderizar a View&lt;br&gt;(Presentation)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="270" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Controlar estados&lt;br&gt;(Presentation)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="545" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Tratar erros da API&lt;br&gt;(Data)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="410" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Tratar retorno&amp;nbsp;da API&lt;br&gt;(Data)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="560" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Navegação&lt;br&gt;(Presentation)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="584.5" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="CRUD + Algumas coisas&lt;br&gt;(Domain)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="562" y="375" width="120" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
