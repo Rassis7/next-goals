@@ -2,9 +2,9 @@ import { HttpPostClient, HttpPostClientParams } from '@/clean/data/implementatio
 import { HttpResponse, HttpStatusCode } from '@/clean/data/implementations/http';
 
 export class HttpPostClientSpy<T, R> implements HttpPostClient<T, R> {
-  url?:string;
+  url?: string;
 
-  body?:T;
+  body?: T;
 
   response: HttpResponse<R> = {
     statusCode: HttpStatusCode.ok,

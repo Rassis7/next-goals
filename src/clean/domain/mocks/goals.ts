@@ -1,4 +1,5 @@
 import faker from 'faker';
+import { Goals } from '../models';
 
 export const mockGoalsParams = () => ({
   name: faker.random.words(),
@@ -17,4 +18,4 @@ export const mockGoalsModel = () => ({
   description: faker.random.words(),
   image: faker.image.abstract(),
   amount: faker.random.number({ min: 1000, max: 50000 }),
-});
+}) as Goals;
