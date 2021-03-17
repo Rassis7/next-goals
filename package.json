@@ -46,7 +46,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "yarn eslint --ext ts,tsx src --fix",
-      "npm run test:staged"
+      "yarn test:staged"
     ]
   }
 }

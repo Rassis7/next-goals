@@ -16,7 +16,7 @@ class RemoteCreateGoals implements CreateGoals {
     const response = await this.httpPostClient.post({ url: this.url, body: params });
 
     switch (response.statusCode) {
-      case HttpStatusCode.ok: return response.body;
+      case HttpStatusCode.ok: return response.body as Goals;
       case HttpStatusCode.unauthorized: throw new InvalidCredentials();
       default: throw new InternalServerError();
     }
