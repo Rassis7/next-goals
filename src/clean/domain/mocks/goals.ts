@@ -5,8 +5,8 @@ export const mockGoalsParams = () => ({
   finishAt: faker.date.future(),
   description: faker.random.words(),
   image: faker.image.abstract(),
-  amount: faker.random.number({min:1000, max: 50000}),
-})
+  amount: faker.random.number({ min: 1000, max: 50000 }),
+});
 
 export const mockGoalsModel = () => ({
   name: faker.random.words(),
@@ -16,5 +16,5 @@ export const mockGoalsModel = () => ({
   finishAt: faker.date.future(),
   description: faker.random.words(),
   image: faker.image.abstract(),
-  amount: faker.random.number({min:1000, max: 50000}),
-})
+  amount: faker.random.number({ min: 1000, max: 50000 }),
+});

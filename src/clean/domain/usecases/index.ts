@@ -1,1 +1,1 @@
-export * from './goals/create'
+export * from './goals/create';

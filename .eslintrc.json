@@ -1,0 +1,74 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "airbnb",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "parserOptions": {
+          "project": ["./tsconfig.json"]
+        }
+      }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "react-hooks",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/consistent-type-definitions": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/no-shadow": ["error"],
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "no-unused-vars": "off",
+      "semi": "off",
+      "no-useless-constructor": "off",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-props-no-spreading": "off",
+	    "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+      "import/prefer-default-export": "off",
+      "import/extensions": "off",
+      "import/no-duplicates": "off",
+      "import/export": "off",
+      "import/no-unresolved": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/order": "off",
+      "import/no-self-import": "off",
+      "import/no-cycle": "off",
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off",
+      "import/no-useless-path-segments": "off",
+      "import/named": "off",
+      "no-shadow": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+}

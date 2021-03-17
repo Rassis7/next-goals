@@ -8,6 +8,6 @@ export interface GoalsParams {
   image?: string;
 }
 
-export interface CreateGoals  {
+export interface CreateGoals {
   create(params: GoalsParams): Promise<Goals>
 }
