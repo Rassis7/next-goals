@@ -13,34 +13,35 @@ const makeSut = () => {
   return { sut, mocked }
 }
 
+const postParams = () => ({
+  url: faker.internet.url(),
+  body: faker.random.objectElement(),
+})
+
+const postMockedValues = () => ({
+  data: faker.random.objectElement(),
+  status: faker.random.number(),
+})
+
 describe('HttpClient', () => {
   it('Should calls the axios correctly returning body and url', async () => {
-    const url = faker.internet.url()
-    const body = faker.random.objectElement()
+    const { url, body } = postParams()
     const { mocked, sut } = makeSut()
     await sut.post({ url, body })
     expect(mocked.post).toHaveBeenCalledWith(url, body)
   });
 
   it('Should returns correctly the body and status if success request', () => {
-    const url = faker.internet.url()
-    const body = faker.random.objectElement()
-    const data = faker.random.objectElement()
-    const status = faker.random.number()
     const { mocked, sut } = makeSut()
-    const mockedAxios = mocked.post.mockResolvedValue({ data, status })
-    const promise = sut.post({ url, body })
+    const mockedAxios = mocked.post.mockResolvedValue(postMockedValues())
+    const promise = sut.post(postParams())
     expect(promise).toEqual(mockedAxios.mock.results[0].value)
   })
 
   it('Should returns correctly the body and status if fails request', () => {
-    const url = faker.internet.url()
-    const body = faker.random.objectElement()
-    const data = faker.random.objectElement()
-    const status = faker.random.number()
     const { mocked, sut } = makeSut()
-    const mockedAxios = mocked.post.mockRejectedValueOnce({ response: { data, status } })
-    const promise = sut.post({ url, body })
+    const mockedAxios = mocked.post.mockRejectedValueOnce({ response: postMockedValues() })
+    const promise = sut.post(postParams())
     expect(promise).toEqual(mockedAxios.mock.results[0].value)
   })
 });
