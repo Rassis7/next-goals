@@ -15,17 +15,19 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "jsx": "preserve",
     "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
-      "@/*" : ["*"]
-    },
+      "@/*": [
+        "*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
-    "src",
+    "src"
   ],
   "exclude": [
     "node_modules"
