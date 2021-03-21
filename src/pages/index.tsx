@@ -1,11 +1,11 @@
-import { Box, Alert, AlertTitle } from '@chakra-ui/react'
+import { FC } from 'react'
+import AdminLayout from './layouts/Admin'
+import PageWithLayoutType from './layouts/types/PageWithLayoutType'
 
-export default function Home() {
-  return (
-    <Box>
-      <Alert status="error">
-        <AlertTitle mr={2}>Your browser is outdated!</AlertTitle>
-      </Alert>
-    </Box>
-  );
-}
+const Home:FC = () => (
+  <div />
+);
+
+(Home as PageWithLayoutType).layout = AdminLayout
+
+export default Home
