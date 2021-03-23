@@ -1,7 +1,7 @@
 import {
   render,
 } from '@testing-library/react'
-import Goals from './goals';
+import Goals from '.';
 
 describe('Goals', () => {
   it('should render AdminLayout', () => {
