@@ -10,6 +10,7 @@ const Header = () => (
     color="red.50"
     fontSize="2xl"
     fontWeight="medium"
+    p="4"
   >
     children
   </Box>
