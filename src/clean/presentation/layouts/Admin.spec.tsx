@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import AdminLayout from './Admin'
+import AdminLayout from './admin'
 
 const makeSut = () => {
   const sut = render(
