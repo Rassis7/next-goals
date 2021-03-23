@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/layout'
-import Header from '@/clean/presentation/components/Header/header-component'
+import Header from '@/clean/presentation/components/header/header-component'
 
 interface Props {
   children: React.ReactNode
