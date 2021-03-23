@@ -1,5 +1,9 @@
-import { ChakraProvider, CSSReset } from '@chakra-ui/react'
-import { theme } from '../styles/theme'
+import {
+  ChakraProvider, CSSReset,
+} from '@chakra-ui/react'
+import {
+  theme,
+} from '../styles/theme'
 import PageWithLayoutType from './layouts/types/PageWithLayoutType';
 
 type AppLayoutProps = {
@@ -7,12 +11,18 @@ type AppLayoutProps = {
   pageProps: any
 }
 
-function MyApp({ Component, pageProps }: AppLayoutProps) {
+function MyApp({
+  Component, pageProps,
+}: AppLayoutProps) {
   const Layout = Component.layout || ((children) => <>{children}</>);
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider
+      theme={theme}
+    >
       <Layout>
-        <Component {...pageProps} />
+        <Component
+          {...pageProps}
+        />
       </Layout>
       <CSSReset />
     </ChakraProvider>
