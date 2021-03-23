@@ -1,8 +1,8 @@
 import {
   FC,
 } from 'react';
-import AdminLayout from '../layouts/Admin'
-import PageWithLayoutType from '../layouts/types/PageWithLayoutType'
+import AdminLayout from '@/clean/presentation/layouts/Admin'
+import PageWithLayoutType from '@/clean/presentation/layouts/types/PageWithLayoutType'
 
 const Goals: FC = () => <div />;
 

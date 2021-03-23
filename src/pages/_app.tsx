@@ -3,8 +3,8 @@ import {
 } from '@chakra-ui/react'
 import {
   theme,
-} from '../styles/theme'
-import PageWithLayoutType from './layouts/types/PageWithLayoutType';
+} from '@/clean/presentation/styles/theme'
+import PageWithLayoutType from '@/clean/presentation/layouts/types/PageWithLayoutType';
 
 type AppLayoutProps = {
   Component: PageWithLayoutType,
