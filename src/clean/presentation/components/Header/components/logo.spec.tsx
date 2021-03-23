@@ -7,16 +7,16 @@ const makeSut = () => {
 }
 
 describe('Header/Logo', () => {
-  it('Should render image in load', async () => {
+  it('Should render image in load', () => {
     const { sut } = makeSut()
     // imagem carrega de forma assíncrona
-    expect(await sut.findByTestId('image')).toBeTruthy()
+    expect(sut.getByTestId('image')).toBeTruthy()
   });
 
-  it('Should render text in load', async () => {
+  it('Should render text in load', () => {
     const { sut } = makeSut()
     // Como a imagem é async, tudo no dom será
-    expect(await sut.findByTestId('logo-title')).toBeTruthy()
-    expect((await sut.findByTestId('logo-title')).textContent).toBe('Next Goals')
+    expect(sut.getByTestId('logo-title')).toBeTruthy()
+    expect((sut.getByTestId('logo-title')).textContent).toBe('Next Goals')
   });
 });
