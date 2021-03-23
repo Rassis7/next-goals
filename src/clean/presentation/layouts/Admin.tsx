@@ -1,6 +1,4 @@
-import {
-  Flex,
-} from '@chakra-ui/layout'
+import { Flex } from '@chakra-ui/layout'
 import Header from '@/clean/presentation/components/Header/header-component'
 
 interface Props {

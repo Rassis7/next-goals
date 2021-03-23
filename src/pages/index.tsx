@@ -1,8 +1,6 @@
-import {
-  FC,
-} from 'react'
-import AdminLayout from '@/clean/presentation/layouts/Admin'
-import PageWithLayoutType from '@/clean/presentation/layouts/types/PageWithLayoutType'
+import { FC } from 'react'
+import AdminLayout from '@/clean/presentation/layouts/admin'
+import PageWithLayoutType from '@/clean/presentation/layouts/types/page-with-layout-type'
 
 const Home:FC = () => (
   <div />
