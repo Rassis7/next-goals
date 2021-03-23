@@ -1,19 +1,17 @@
-import {
-  Box,
-} from '@chakra-ui/react'
-import {
-  memo,
-} from 'react'
+import { memo } from 'react'
+import { Box } from '@chakra-ui/react'
 
 const Header = () => (
   <Box
     data-testid="header"
     as="header"
-    background="purple.400"
     height="14"
     width="100%"
+    color="red.50"
+    fontSize="2xl"
+    fontWeight="medium"
   >
-    head
+    children
   </Box>
 )
 

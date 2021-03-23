@@ -1,9 +1,5 @@
-import {
-  axios, AxiosResponse,
-} from '@/clean/infra/services/axios'
-import {
-  HttpPostClient, HttpPostClientParams, HttpResponse,
-} from '@/clean/data/implementations/http';
+import { axios, AxiosResponse } from '@/clean/infra/services/axios'
+import { HttpPostClient, HttpPostClientParams, HttpResponse } from '@/clean/data/implementations/http';
 
 export class HttpClient<T=any, R=any> implements HttpPostClient<T, R> {
   post = async ({

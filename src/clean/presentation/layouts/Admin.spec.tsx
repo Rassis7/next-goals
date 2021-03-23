@@ -26,13 +26,6 @@ describe('AdminLayout', () => {
     expect(sut.getByTestId('header')).toBeTruthy()
   });
 
-  it('Should render Footer component', () => {
-    const {
-      sut,
-    } = makeSut()
-    expect(sut.getByTestId('footer')).toBeTruthy()
-  });
-
   it('Should render children component', () => {
     const {
       sut,

@@ -1,9 +1,5 @@
-import {
-  ChakraProvider, CSSReset,
-} from '@chakra-ui/react'
-import {
-  theme,
-} from '@/clean/presentation/styles'
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
+import { theme } from '@/clean/presentation/styles'
 import PageWithLayoutType from '@/clean/presentation/layouts/types/PageWithLayoutType';
 
 type AppLayoutProps = {

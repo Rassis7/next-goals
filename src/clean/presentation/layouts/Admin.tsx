@@ -1,7 +1,6 @@
 import {
   Flex,
 } from '@chakra-ui/layout'
-import Footer from '@/clean/presentation/components/Footer/footer-component'
 import Header from '@/clean/presentation/components/Header/header-component'
 
 interface Props {
@@ -20,7 +19,6 @@ const AdminLayout = ({
   >
     <Header />
     <section>{children}</section>
-    <Footer />
   </Flex>
 )
 
