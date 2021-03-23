@@ -1,4 +1,6 @@
-import { FC } from 'react'
+import {
+  FC,
+} from 'react'
 import AdminLayout from './layouts/Admin'
 import PageWithLayoutType from './layouts/types/PageWithLayoutType'
 

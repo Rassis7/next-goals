@@ -8,4 +8,6 @@ axios.create({
 })
 
 export * from 'axios'
-export { axios }
+export {
+  axios,
+}

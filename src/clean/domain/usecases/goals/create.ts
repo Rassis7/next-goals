@@ -1,4 +1,6 @@
-import { Goals } from '@/clean/domain/models';
+import {
+  Goals,
+} from '@/clean/domain/models';
 
 export interface GoalsParams {
   name: string;

@@ -1,12 +1,16 @@
 import faker from 'faker';
-import { Goals } from '../models';
+import {
+  Goals,
+} from '../models';
 
 export const mockGoalsParams = () => ({
   name: faker.random.words(),
   finishAt: faker.date.future(),
   description: faker.random.words(),
   image: faker.image.abstract(),
-  amount: faker.random.number({ min: 1000, max: 50000 }),
+  amount: faker.random.number({
+    min: 1000, max: 50000,
+  }),
 });
 
 export const mockGoalsModel = () => ({
@@ -17,5 +21,7 @@ export const mockGoalsModel = () => ({
   finishAt: faker.date.future(),
   description: faker.random.words(),
   image: faker.image.abstract(),
-  amount: faker.random.number({ min: 1000, max: 50000 }),
+  amount: faker.random.number({
+    min: 1000, max: 50000,
+  }),
 }) as Goals;

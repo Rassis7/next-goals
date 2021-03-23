@@ -1,4 +1,6 @@
-import { render } from '@testing-library/react'
+import {
+  render,
+} from '@testing-library/react'
 import Goals from './goals';
 
 describe('Goals', () => {
