@@ -40,6 +40,7 @@
       "@typescript-eslint/no-shadow": ["error"],
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-empty-function": "off",
       "no-unused-vars": "off",
       "semi": "off",
       "no-useless-constructor": "off",
@@ -66,8 +67,10 @@
       "import/no-named-as-default-member": "off",
       "import/no-useless-path-segments": "off",
       "import/named": "off",
+      "no-use-before-define": "off",
       "no-shadow": "off",
-      "object-curly-newline": ["error", { "consistent": true  }]
+      "object-curly-newline": ["error", { "consistent": true  }],
+      "max-len": ["error", { "code": 100, "ignoreStrings": true  }]
     },
     "settings": {
       "import/resolver": {
