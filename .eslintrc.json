@@ -66,6 +66,7 @@
       "import/no-named-as-default": "off",
       "import/no-named-as-default-member": "off",
       "import/no-useless-path-segments": "off",
+      "import/no-named-default": "off",
       "import/named": "off",
       "no-use-before-define": "off",
       "no-shadow": "off",
