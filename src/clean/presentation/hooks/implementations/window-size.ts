@@ -17,7 +17,7 @@ const getCssSize = (width: number) => {
 }
 
 export const useWindowSize = (): WindowSize => {
-  const [windowSize, setWindowSize] = useState<WindowSize>();
+  const [windowSize, setWindowSize] = useState<WindowSize>({ width: 0, height: 0, cssSize: 'ESM' });
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({
@@ -31,5 +31,5 @@ export const useWindowSize = (): WindowSize => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  return windowSize as WindowSize;
+  return windowSize;
 }

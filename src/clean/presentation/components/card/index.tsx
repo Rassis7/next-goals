@@ -1,53 +1,67 @@
-import { ReactNode } from 'react'
-import { Box, Divider, Flex, Text, useStyleConfig } from '@chakra-ui/react'
+import { Box, Flex, Text, useStyleConfig } from '@chakra-ui/react'
 import { useWindowSize } from '@/clean/presentation/hooks/implementations/window-size'
 
 interface Props {
-  header?: ReactNode | string
-  body?: ReactNode | string
-  footer?: ReactNode
+  header?: JSX.Element | string
+  body?: JSX.Element | string
+  footer?: JSX.Element | string
+  actionButton?: JSX.Element
 }
 
-const Card = ({ header, body, footer }: Props) => {
+const Card = ({ header, body, footer, actionButton }: Props) => {
   const { cssSize } = useWindowSize()
   const styles = useStyleConfig('Card', { size: cssSize === 'SM' ? 'sm' : 'md' })
 
   return (
     <Flex
-      alignItems="center"
-      justifyContent="space-between"
+      justifyContent="center"
       flexDirection="column"
       as="div"
       sx={styles}
+      maxWidth="15rem"
+      cursor="pointer"
+      height="100%"
     >
-      { header && (
+      {actionButton}
+
+      {header && (
       <Box>
         <Text
-          fontSize="medium"
-          fontWeight="semibold"
-          color="gray.600"
+          fontSize="x-large"
+          fontWeight="bold"
+          color="white"
+          my="1rem"
+          textTransform="uppercase"
         >
           {header}
         </Text>
       </Box>
       )}
-      <Divider />
       { body && (
-      <Box>
+      <Box
+        flexWrap="nowrap"
+      >
         <Text
           fontSize="medium"
-          fontWeight="normal"
-          color="gray.400"
+          fontWeight="semibold"
+          color="gray.300"
+          my="0.5rem"
         >
           {body}
         </Text>
       </Box>
       )}
       { footer && (
-      <>
-        <Divider />
-        <Box>{footer}</Box>
-      </>
+        <Box>
+          <Text
+            fontSize="sm"
+            fontWeight="light"
+            color="gray.300"
+          >
+            {footer}
+          </Text>
+
+        </Box>
       )}
     </Flex>
   )

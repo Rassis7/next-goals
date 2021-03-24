@@ -15,12 +15,13 @@ function MyApp({
     <ChakraProvider
       theme={theme}
     >
+      <CSSReset />
       <Layout>
         <Component
           {...pageProps}
         />
       </Layout>
-      <CSSReset />
+
     </ChakraProvider>
   );
 }

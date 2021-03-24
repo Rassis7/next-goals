@@ -3,9 +3,11 @@ import { ComponentStyleConfig } from '@chakra-ui/theme';
 export const Card: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: '10px',
-    backgroundColor: 'rgba(255,255,255,0.20)',
-    boxShadow: '0 8px 32px 0 rgba(31,38,135,0.37)',
-    backdropFilter: 'blur(1.0px)',
+    backgroundColor: 'gray.600',
+    boxShadow: '0 8px 32px 0 rgba(255,255,255,0.1)',
+    _hover: {
+      boxShadow: '0 0 32px 0 rgba(255,255,255,0.2)',
+    },
   },
   sizes: {
     sm: {

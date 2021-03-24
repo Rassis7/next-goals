@@ -11,7 +11,6 @@ const AdminLayout = ({
   <Flex
     data-testid="admin-layout"
     flexDirection="column"
-    justifyContent="space-between"
     alignItems="center"
     height="100vh"
   >
