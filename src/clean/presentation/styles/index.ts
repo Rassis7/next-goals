@@ -1,12 +1,12 @@
 import { extendTheme } from '@chakra-ui/react';
 import { fonts } from './fonts'
 import { colorMode } from './color-mode'
-import { Card } from './components'
+import { Card, GradientButton } from './components'
 
 export const theme = extendTheme({
   config: {
     ...colorMode,
   },
-  components: { Card },
+  components: { Card, GradientButton },
   ...fonts,
 })
