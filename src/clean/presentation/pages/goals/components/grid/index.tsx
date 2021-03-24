@@ -36,7 +36,7 @@ const Grid = ({ goals }: Props) => {
               <span>
                 Término:
                 {' '}
-                {g.finishAt.toISOString()}
+                {g.finishAt?.toISOString()}
               </span>
             )}
             actionButton={(
