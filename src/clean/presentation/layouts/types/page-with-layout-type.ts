@@ -1,7 +1,7 @@
 import {
   NextPage,
 } from 'next'
-import AdminLayout from '../admin'
+import AdminLayout from '../Admin'
 
 type PageWithAdminLayoutType = NextPage & { layout: typeof AdminLayout }
 
