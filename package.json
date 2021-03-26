@@ -8,7 +8,7 @@
     "start": "next start",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test -- --watch",
-    "test:staged": "yarn test -- --findRelatedTests",
+    "test:staged": "yarn test --findRelatedTests ./src/*.{ts,tsx}",
     "test:ci": "yarn test -- --coverage",
     "prepare": "husky install"
   },
@@ -22,6 +22,7 @@
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-hook-form": "^6.15.5",
     "react-icons": "^4.2.0",
     "uuid": "^8.3.2"
   },
@@ -56,7 +57,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "yarn eslint --ext ts,tsx src --fix",
-      "yarn test:staged"
+      "yarn test:ci"
     ]
   }
 }
