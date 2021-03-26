@@ -6,13 +6,31 @@ import {
   Textarea,
   NumberInput,
   NumberInputField,
+  FormHelperText,
+  Box,
 } from '@chakra-ui/react'
-import { default as FormControlComponent } from '@/clean/presentation/components/form'
+import FormControl from '@/clean/presentation/components/form-control'
+import { FormatCurrency } from '@/clean/presentation/utils/currency'
 
 const Form = () => {
   const styles = useStyleConfig('GradientButton')
-  return (
 
+  const InputNumber = () => {
+    const value = 1050.9
+    const format = (val:number) => FormatCurrency.setValue(val).getBRL().build()
+    const parse = (val: string) => val
+    return (
+      <NumberInput
+        onChange={(valueString) => parse(valueString)}
+        value={format(value)}
+        max={50}
+      >
+        <NumberInputField />
+      </NumberInput>
+    )
+  }
+
+  return (
     <form
       data-testeid="form"
       action=""
@@ -23,34 +41,45 @@ const Form = () => {
         alignItems="center"
       >
 
-        <FormControlComponent
+        <FormControl
           name="name"
           label="Sua meta deve ter um nome, que seja simples e claro"
           labelProps={{ textAlign: 'center' }}
+          controlProps={{ isRequired: true }}
         >
           <Input
             type="text"
             isInvalid
           />
-        </FormControlComponent>
+        </FormControl>
 
-        <FormControlComponent
+        <FormControl
           name="finishAt"
           label="Toda meta tem um ínicio e fim, defina seus prazos"
           labelProps={{ textAlign: 'center' }}
-          controlProps={{ mt: '8' }}
+          controlProps={{ mt: '8', isRequired: true }}
         >
-          <Flex>
-            <Input
-              type="date"
-            />
-            <Input
-              type="date"
-            />
+          <Flex
+            flexDirection="column"
+          >
+            <Box>
+              <Input
+                type="date"
+              />
+              <FormHelperText>Data de Início</FormHelperText>
+            </Box>
+            <Box
+              mt="1rem"
+            >
+              <Input
+                type="date"
+              />
+              <FormHelperText>Data de Fim</FormHelperText>
+            </Box>
           </Flex>
-        </FormControlComponent>
+        </FormControl>
 
-        <FormControlComponent
+        <FormControl
           name="description"
           label="É legal colocar uma descrição para sua meta, principalmente se for algo motivador"
           labelProps={{ textAlign: 'center' }}
@@ -59,22 +88,16 @@ const Form = () => {
           <Textarea
             rows={5}
           />
-        </FormControlComponent>
+        </FormControl>
 
-        <FormControlComponent
+        <FormControl
           name="description"
           label="Se sua meta for financeira, coloque aqui o valor dela"
           labelProps={{ textAlign: 'center' }}
           controlProps={{ mt: '8' }}
         >
-          <NumberInput
-        // onChange={(valueString) => setValue(parse(valueString))}
-        // value={format(value)}
-            max={50}
-          >
-            <NumberInputField />
-          </NumberInput>
-        </FormControlComponent>
+          <InputNumber />
+        </FormControl>
 
         <Button
           title="Próximo campo"
