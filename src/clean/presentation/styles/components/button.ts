@@ -21,6 +21,14 @@ export const GradientButton: ComponentStyleConfig = {
       padding: '16px',
     },
   },
+  variants: {
+    circle: {
+      width: '3rem',
+      height: '3rem',
+      borderRadius: '1.5rem',
+      padding: 0,
+    },
+  },
   defaultProps: {
     size: 'md',
   },

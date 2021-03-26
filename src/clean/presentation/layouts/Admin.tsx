@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/layout'
+import { Box, Flex } from '@chakra-ui/layout'
 import Header from '@/clean/presentation/components/header/header-component'
 
 interface Props {
@@ -12,10 +12,14 @@ const AdminLayout = ({
     data-testid="admin-layout"
     flexDirection="column"
     alignItems="center"
-    height="100vh"
   >
     <Header />
-    <section>{children}</section>
+    <Box
+      margin="4rem 2rem"
+      as="section"
+    >
+      {children}
+    </Box>
   </Flex>
 )
 
