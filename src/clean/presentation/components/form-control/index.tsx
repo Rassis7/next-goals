@@ -5,6 +5,7 @@ import {
   FormErrorMessage,
   FormControlProps,
   FormLabelProps,
+  FormHelperText,
 } from '@chakra-ui/form-control'
 
 type Label = FormLabelProps
@@ -14,11 +15,12 @@ interface Props {
   children: ReactNode;
   label: string;
   name: string;
+  helpText?:string;
   labelProps?: Partial<Label>;
   controlProps?: Partial<Control>;
 }
 
-const FormControl = ({ children, label, name, labelProps, controlProps }:Props) => (
+const FormControl = ({ children, label, name, helpText, labelProps, controlProps }:Props) => (
   <FormControlComponent
     id={`id-${name}`}
     {...controlProps}
@@ -30,6 +32,7 @@ const FormControl = ({ children, label, name, labelProps, controlProps }:Props) 
       {label}
     </FormLabel>
     {children}
+    {helpText && <FormHelperText>{helpText}</FormHelperText>}
     <FormErrorMessage>
       Campo obrigatório
     </FormErrorMessage>
