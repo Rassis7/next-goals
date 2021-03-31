@@ -10,23 +10,20 @@ export class FormatCurrency {
   }
 
   getBRL() {
-    this.localMoney = new Intl.NumberFormat('pt-br', {
-      style: 'currency',
-      currency: 'BRL',
-    }).format(this.money)
+    this.localMoney = this.localMoney
+      .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
     return this
   }
 
   getBDValue() {
     this.localMoney = this.localMoney
       .toString()
-      .replace(/[R$ ]/gm, '')
-      .replace(/[\.]?/gm, '')
+      .replace(/[R$.]+/gm, '')
       .replace(/[\,]/gm, '.')
     return this
   }
 
-  build() {
+  build() : string | number {
     return this.localMoney
   }
 }
