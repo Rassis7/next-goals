@@ -70,7 +70,7 @@
       "import/named": "off",
       "no-use-before-define": "off",
       "no-shadow": "off",
-      "object-curly-newline": ["error", { "consistent": true  }],
+      "object-curly-newline": ["error", { "minProperties": 2  }],
       "max-len": ["error", { "code": 100, "ignoreStrings": true  }]
     },
     "settings": {
