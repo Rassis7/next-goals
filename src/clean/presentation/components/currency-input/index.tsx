@@ -1,9 +1,10 @@
 import MaskedInput from 'react-text-mask'
 import { Input, InputProps } from '@chakra-ui/input';
 import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+import { forwardRef } from '@chakra-ui/system';
 
 const defaultMaskOptions = {
-  prefix: 'R$',
+  prefix: '',
   suffix: '',
   includeThousandsSeparator: false,
   thousandsSeparatorSymbol: '.',
@@ -15,10 +16,11 @@ const defaultMaskOptions = {
   allowLeadingZeroes: false,
 }
 
-const CurrencyInput = (props: InputProps) => {
+const CurrencyInput = (props: InputProps, ref:any) => {
   const currencyMask = createNumberMask(defaultMaskOptions)
   return (
     <Input
+      ref={ref}
       as={MaskedInput}
       mask={currencyMask}
       {...props}
@@ -26,4 +28,4 @@ const CurrencyInput = (props: InputProps) => {
   )
 }
 
-export default CurrencyInput
+export default forwardRef(CurrencyInput)
