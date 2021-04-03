@@ -23,7 +23,7 @@ interface Props {
   controlProps?: Partial<Control>;
   control?: ControlForm<Record<string, any>>;
   defaultValue?:any
-  errorMessage?:string
+  errorMessage?: string
 }
 
 const FormControl = (
@@ -59,7 +59,13 @@ const FormControl = (
       </FormLabel>
       {newElement}
       {helpText && <FormHelperText>{helpText}</FormHelperText>}
-      <FormErrorMessage>{errorMessage}</FormErrorMessage>
+      {errorMessage && (
+      <FormErrorMessage
+        data-testid={`error-${name}`}
+      >
+        {errorMessage}
+      </FormErrorMessage>
+      )}
     </FormControlComponent>
   )
 }
