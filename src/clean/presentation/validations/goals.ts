@@ -18,7 +18,7 @@ export const goalsValidation = {
       'finishAt',
       (finishAt: Date, schema: any) => (
         finishAt
-    && schema.max(new Date(finishAt), 'A data inicial não pode ser maior que a final')),
+        && schema.max(new Date(finishAt), 'A data inicial não pode ser maior que a final')),
     ),
   finishAt: yup
     .date()
@@ -32,7 +32,7 @@ export const goalsValidation = {
       'createdAt',
       (createdAt: Date, schema: any) => (
         createdAt
-    && schema.min(new Date(createdAt), 'A data final não pode ser menor que a inicial')
+         && schema.min(new Date(createdAt), 'A data final não pode ser menor que a inicial')
       ),
     ),
   description: yup.string(),
