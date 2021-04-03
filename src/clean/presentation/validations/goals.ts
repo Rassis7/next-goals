@@ -7,9 +7,38 @@ export const goalsValidation = {
     .required('O status é obrigatório'),
   createdAt: yup
     .date()
-    .required('A data de início deve ser informada.').default(new Date()),
-  finishAt: yup.date().required('A data de fim deve ser informada.').default(new Date()),
+    .transform(function (value, originalValue: string) {
+      if (this.isType(value)) return value;
+      if (!originalValue) return undefined
+      const date = originalValue?.split('/').reverse().join('-')
+      return new Date(date)
+    })
+    .required('A data de início deve ser informada.')
+    .default(undefined)
+    .when(
+      'finishAt',
+      (finishAt: Date, schema: any) => (
+        finishAt
+    && schema.max(new Date(finishAt), 'A data inicial não pode ser maior que a final')),
+    ),
+  finishAt: yup
+    .date()
+    .transform(function (value, originalValue: string) {
+      if (this.isType(value)) return value;
+      if (!originalValue) return undefined
+      const date = originalValue?.split('/').reverse().join('-')
+      return new Date(date)
+    })
+    .required('A data de fim deve ser informada.')
+    .default(undefined)
+    .when(
+      'createdAt',
+      (createdAt: Date, schema: any) => (
+        createdAt
+    && schema.min(new Date(createdAt), 'A data final não pode ser menor que a inicial')
+      ),
+    ),
   description: yup.string(),
   image: yup.string().url(),
-  amount: yup.number().min(0, 'O valor não pode ser negativo'),
+  amount: yup.number().nullable().min(0, 'O valor não pode ser negativo'),
 }

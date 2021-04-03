@@ -26,10 +26,8 @@ const Form = () => {
   } = useForm({ resolver: yupResolver(
     yup.object().shape({
       name, amount, createdAt, finishAt, description,
-    }),
+    }, ['createdAt', 'finishAt']),
   ) })
-
-  console.log(errors);
 
   const onSubmit = (values: FieldValues) => {
     console.log(values)
@@ -81,6 +79,7 @@ const Form = () => {
             >
               <Input
                 type="date"
+                data-testid="createdAt"
               />
             </FormControl>
           </Box>
@@ -101,6 +100,7 @@ const Form = () => {
             >
               <Input
                 type="date"
+                data-testid="finishAt"
               />
             </FormControl>
           </Box>
@@ -136,6 +136,7 @@ const Form = () => {
         </FormControl>
 
         <Button
+          data-testid="submit"
           type="submit"
           title="Próximo campo"
           mt="20"
