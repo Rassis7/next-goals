@@ -1,4 +1,5 @@
 import * as yup from 'yup'
+import { transform } from './helpers/date'
 
 export const goalsValidation = {
   name: yup.string().required('O nome é obrigatório'),
@@ -9,9 +10,7 @@ export const goalsValidation = {
     .date()
     .transform(function (value, originalValue: string) {
       if (this.isType(value)) return value;
-      if (!originalValue) return undefined
-      const date = originalValue?.split('/').reverse().join('-')
-      return new Date(date)
+      return transform(originalValue)
     })
     .required('A data de início deve ser informada.')
     .default(undefined)
@@ -25,9 +24,7 @@ export const goalsValidation = {
     .date()
     .transform(function (value, originalValue: string) {
       if (this.isType(value)) return value;
-      if (!originalValue) return undefined
-      const date = originalValue?.split('/').reverse().join('-')
-      return new Date(date)
+      return transform(originalValue)
     })
     .required('A data de fim deve ser informada.')
     .default(undefined)
