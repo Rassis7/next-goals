@@ -16,7 +16,7 @@ const testErrorWrapMessage = (sut: RenderResult, name:string, errorMessage: stri
   expect(error.textContent).toBe(errorMessage)
 }
 
-const setFieldValue = (sut: RenderResult, name: string, value: string) => {
+const setFieldValue = (sut: RenderResult, name: string, value: string | number) => {
   const field = sut.getByTestId(name)
   fireEvent.change(field, { target: { value } })
 }
@@ -54,5 +54,12 @@ describe('CreateGoals/Form', () => {
     await handleSubmitForm(sut)
     testErrorWrapMessage(sut, 'error-createdAt', 'A data inicial não pode ser maior que a final')
     testErrorWrapMessage(sut, 'error-finishAt', 'A data final não pode ser menor que a inicial')
+  })
+
+  it('Should show error if insert a string in the amount field', async () => {
+    const { sut } = makeSut()
+    setFieldValue(sut, 'amount', faker.random.words())
+    await handleSubmitForm(sut)
+    testErrorWrapMessage(sut, 'error-amount', 'Esse campo só aceita números')
   })
 });

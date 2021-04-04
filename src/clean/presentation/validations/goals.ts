@@ -37,5 +37,9 @@ export const goalsValidation = {
     ),
   description: yup.string(),
   image: yup.string().url(),
-  amount: yup.number().nullable().min(0, 'O valor não pode ser negativo'),
+  amount: yup
+    .number()
+    .typeError('Esse campo só aceita números')
+    .nullable()
+    .default(0),
 }
