@@ -132,7 +132,9 @@ const Form = () => {
           defaultValue={0}
           errorMessage={errors?.amount?.message}
         >
-          <CurrencyInput />
+          <CurrencyInput
+            data-testid="amount"
+          />
         </FormControl>
 
         <Button
