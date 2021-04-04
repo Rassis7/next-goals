@@ -3,6 +3,8 @@ import {
   fireEvent, render, RenderResult, waitFor,
 } from '@testing-library/react';
 import Form from '.';
+import faker from 'faker'
+import { FormatDate } from '@/clean/presentation/utils/format-date'
 
 const makeSut = () => {
   const sut = render(<Form />)
@@ -25,6 +27,8 @@ const handleSubmitForm = async (sut: RenderResult) => {
   await waitFor(() => form)
 }
 
+const getStringDate = (date?: Date) => FormatDate.set(date).getENFormat('string').build() as string
+
 describe('CreateGoals/Form', () => {
   afterEach(cleanup)
 
@@ -43,9 +47,12 @@ describe('CreateGoals/Form', () => {
 
   it('Should show error if max date if less than min date', async () => {
     const { sut } = makeSut()
-    setFieldValue(sut, 'createdAt', '2021-01-10')
-    setFieldValue(sut, 'finishAt', '2021-01-01')
+    const future = getStringDate(faker.date.future())
+    setFieldValue(sut, 'createdAt', future)
+    const past = getStringDate(faker.date.past())
+    setFieldValue(sut, 'finishAt', past)
     await handleSubmitForm(sut)
     testErrorWrapMessage(sut, 'error-createdAt', 'A data inicial não pode ser maior que a final')
+    testErrorWrapMessage(sut, 'error-finishAt', 'A data final não pode ser menor que a inicial')
   })
 });
